@@ -1,0 +1,24 @@
+{
+  "name": "uucb-c12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MEaston12/UUCB-C12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MEaston12/UUCB-C12/issues"
+  },
+  "homepage": "https://github.com/MEaston12/UUCB-C12#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.1.0",
+    "mysql2": "^2.2.5"
+  }
+}
