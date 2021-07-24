@@ -1,7 +1,7 @@
 require('dotenv').config();
+const sql = require('./handlers/sql');
 
-const {buildTeam} = require('./handlers/input');
-const {buildCards} = require('./handlers/templateHandler');
-
-buildTeam()
-    .then(buildCards)
+//IIAFE
+(async () => {
+    await sql.init();
+})();
