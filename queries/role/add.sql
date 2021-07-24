@@ -1,1 +1,1 @@
-INSERT INTO Role ( title, salary, department_id ) VALUES ( ?, ?, ? )
+INSERT INTO Role ( title, salary, department_id ) VALUES ( @title, @salary, @department_id )

@@ -26,8 +26,16 @@ class DB { //Classes are more fun
         this.employee = {};
         this.role = {};
     }
-    async query(queryStr, args){
-        return await this.connection.query(queryStr, args);
+    query(queryStr, argsObj){
+        const args = [];
+        queryStr = queryStr.replace(/@(\S+)/, (match, arg) => {
+            if(argsObj[arg]) {
+                args.push(argsObj[arg]);
+                return '?';
+            }
+            return match;
+        });
+        return this.connection.query(queryStr, args);
     }
     async init(){
         this.connection = await mysql.createConnection({

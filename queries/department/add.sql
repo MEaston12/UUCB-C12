@@ -1,1 +1,1 @@
-INSERT INTO Department ( name ) VALUES ( ? )
+INSERT INTO Department ( name ) VALUES ( @name )
