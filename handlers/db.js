@@ -11,7 +11,7 @@ async function bootstrap(db){
             db[dirEnt.name] = {};
             for(const queryFile of await fs.readdir(`./queries/${dirEnt.name}`)){
                 const queryName = queryFile.split('.')[0];
-                const query = fs.readFile(`./queries/${dirEnt.name}/${queryFile}`, 'utf-8');
+                const query = await fs.readFile(`./queries/${dirEnt.name}/${queryFile}`, 'utf-8');
                 db[dirEnt.name][queryName] = args => db.query(query, args);
                 console.log(`Loaded db.${dirEnt.name}.${queryName}(args)`)
             }
