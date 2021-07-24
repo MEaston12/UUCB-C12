@@ -1,0 +1,1 @@
+INSERT INTO Role ( title, salary, department_id ) VALUES ( ?, ?, ? )
