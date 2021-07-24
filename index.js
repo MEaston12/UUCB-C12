@@ -1,7 +1,8 @@
 require('dotenv').config();
-const sql = require('./handlers/sql');
+const db = require('./handlers/db');
 
 //IIAFE
 (async () => {
-    await sql.init();
+    await db.init();
+
 })();
