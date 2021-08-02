@@ -12,14 +12,14 @@ This project was put together for the U of U's Coding Bootcamp program to demons
 2. [Table of Contents](#table-of-contents)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Contribution](#contribution)
-6. [Testing](#testing)
-7. [License](#license)
-8. [Questions](#questions)
+5. [License](#license)
+6. [Questions](#questions)
 
 ## Installation
 
 ```npm i```
+
+Populate your .env with ```HOST= USER= DATABASE= PASSWORD= ```
 
 ## Usage
 
