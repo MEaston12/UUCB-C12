@@ -1,16 +1,17 @@
 const inquirer = require('inquirer');
-const db = require('db');
+const db = require('./db');
 
-const prompts = require('../prompts');
+const actionPrompt = require('../prompts/action');
 
 const run = async () => {
-    const action = await inquirer.prompt(prompts.action);
-    if(!action) return;
-    let response = await require(action)(db);
+    const action = await inquirer.prompt(actionPrompt);
+    console.log(action);
+    if(!action.selection) return;
+    const response = await require('../prompts/' + action.selection)(db);
     if(typeof response == 'string') console.log(response);
     else (console.table(response));
 
-    run(); //Recursive call - will infinite loop unless exit early
+    return run(); //Recursive call - will infinite loop unless exit early
 }
 
 module.exports = {run};
