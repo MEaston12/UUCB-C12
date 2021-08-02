@@ -9,20 +9,20 @@ module.exports =
             value: "department/view"
         },
         {
-            name: "Add a Department",
-            value: "department/add"
-        },
-        {
             name: "View all Roles",
             value: "role/view"
         },
         {
-            name: "Add a Role",
-            value: "role/add"
-        },
-        {
             name: "View all Employees",
             value: "employee/view"
+        },
+        {
+            name: "Add a Department",
+            value: "department/add"
+        },
+        {
+            name: "Add a Role",
+            value: "role/add"
         },
         {
             name: "Add an Employee",
