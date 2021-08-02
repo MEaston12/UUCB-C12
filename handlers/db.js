@@ -28,7 +28,7 @@ class DB { //Classes are more fun
     }
     query(queryStr, argsObj){
         const args = [];
-        queryStr = queryStr.replace(/@(\S+)/, (match, arg) => {
+        queryStr = queryStr.replace(/@(\w+)/g, (match, arg) => {
             if(argsObj[arg]) {
                 args.push(argsObj[arg]);
                 return '?';
