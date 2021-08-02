@@ -1,9 +1,10 @@
 require('dotenv').config();
 const db = require('./handlers/db');
+const input = require('./handlers/input');
+const cTable = require('console.table');
 
 //IIAFE
 (async () => {
     await db.init();
-    await db.department.add({name:'Finances'});
-    console.log(await db.department.viewAll());
+    await input.run();
 })();
